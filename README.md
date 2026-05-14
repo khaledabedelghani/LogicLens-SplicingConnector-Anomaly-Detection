@@ -516,25 +516,6 @@ This saves predicted anomaly maps under a folder such as:
 ```text
 pred_maps/
 ```
-
-### Option D: Compute mAP-Style Localization Metrics
-
-After anomaly maps are generated:
-
-```bash
-python compute_map_from_maps.py
-```
-
-This computes localization-style metrics such as:
-
-```text
-mAP@50
-mAP@50:95
-per-image IoU
-```
-
----
-
 ## 13. Evaluation Metrics
 
 The project reports both image-level and pixel-level metrics.
@@ -576,24 +557,16 @@ Final numeric results should be inserted after running the evaluation scripts.
 
 Example result table:
 
-| Method | Setup | Image AUROC | Image F1 | Pixel AUROC | Pixel F1 |
+## 14. Results
+
+The table below summarizes the main final results obtained during the project.
+
+| Method | Setup | Image AUROC | Image F1 / Best F1 | Pixel AUROC | Pixel F1 |
 |---|---|---:|---:|---:|---:|
-| EfficientAD | Baseline | TBD | TBD | TBD | TBD |
-| EfficientAD | ROI / black background | TBD | TBD | TBD | TBD |
-| PatchCore | Best setup | TBD | TBD | TBD | TBD |
-| PaDiM | ROI setup | TBD | TBD | TBD | TBD |
-| LogicLens | ROI Patch/DeiT fusion | TBD | TBD | TBD | TBD |
-
-Localization-style evaluation:
-
-| Method | mAP@50 | mAP@50:95 |
-|---|---:|---:|
-| EfficientAD | TBD | TBD |
-| PatchCore | TBD | TBD |
-| PaDiM | TBD | TBD |
-| LogicLens Fusion | TBD | TBD |
-
----
+| EfficientAD | ROI + black background + augmentation | 0.8317 | 0.7195 | 0.5528 | 0.1242 |
+| PatchCore | Best setup, image_size=224, k=3 | 0.8177 | 0.7834 | 0.7553 | 0.2426 |
+| PaDiM | Additional ROI-based method | 0.6436 | 0.3333 | 0.5592 | 0.0938 |
+| LogicLens | ROI + Patch Memory + DeiT calibrated fusion | 0.8715 | 0.8487 | Not reported | Not reported |
 
 ## 15. Failure Case Analysis
 
