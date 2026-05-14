@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large data / outputs
+train/
+validation/
+test/
+ground_truth/
+outputs/
+training_workdir/*
+training_outputs/*
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

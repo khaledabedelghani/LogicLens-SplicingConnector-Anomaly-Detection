@@ -1,0 +1,33 @@
+Before uploading to Google Drive:
+
+Keep these folders/files:
+- train/
+- validation/
+- test/
+- ground_truth/
+- outputs/
+- training_package/
+- defects_config.json
+- readme.txt
+- license.txt
+- 01_dataset_audit.py
+- 02_dataset_manifest.py
+- 03_visual_dataset_check.py
+- 04_defect_type_analysis.py
+- 05_roi_consistency_audit.py
+
+Do NOT include:
+- .venv/
+- __pycache__/
+- .ipynb_checkpoints/
+- *.pyc
+
+Zip name:
+splicing_connectors.zip
+
+Before uploading:
+1. Make sure outputs/dataset_manifest.csv exists.
+2. Make sure outputs/anomaly_mask_audit.csv exists.
+3. Make sure outputs/defect_type_analysis_report.txt exists.
+4. Make sure training_package exists.
+5. Make sure .venv is NOT inside the zip.

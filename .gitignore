@@ -1,0 +1,47 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Large datasets / generated data
+data/
+datasets/
+data_roi/
+data_roi_bg/
+data_roi_bg_aug/
+data_roi_padim/
+data_roi_padim_aug/
+dev_validation/
+bg_remove_work/
+
+# Outputs and generated artifacts
+outputs/
+pred_maps/
+results_pred_maps/
+review_threshold_0_005025/
+threshold_calibration/
+analysis_outputs/
+analysis_samples/
+analysis_samples-1/
+
+# Model weights / checkpoints
+pre_trained/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Large archives
+*.zip
+*.rar
+*.7z
+
+# Caches
+.cache/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+numpy
+pandas
+pillow
+opencv-python
+matplotlib
+scikit-learn
+tqdm
+albumentations
+einops
+kornia
+lightning
+anomalib==2.1.0
+timm

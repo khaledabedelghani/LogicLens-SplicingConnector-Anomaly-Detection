@@ -1,0 +1,26 @@
+DO NOT:
+
+1. Do not train on test/logical_anomalies.
+2. Do not train on test/structural_anomalies.
+3. Do not train using ground_truth masks.
+4. Do not tune using test masks.
+5. Do not create an augmented dataset folder.
+6. Do not resize to 224x224.
+7. Do not use square resize.
+8. Do not crop.
+9. Do not use flip augmentation.
+10. Do not use random erasing.
+11. Do not use cutout.
+12. Do not use strong color jitter.
+13. Do not use mixup or cutmix.
+14. Do not mix train and test images.
+15. Do not report accuracy only.
+16. Do not delete or rename original dataset files.
+
+FINAL DECISION:
+- Original dataset only
+- Full image
+- 1024x512
+- PatchCore without augmentation
+- EfficientAD with very light augmentation only if safe
+- Evaluate overall / logical / structural separately
